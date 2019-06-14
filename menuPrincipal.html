@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- ******* Links CSS ******* -->
+        <link rel="stylesheet" href="./photon/dist/css/photon.min.css">
+        <link rel="stylesheet" href="./css/menuPrincipal.css">
+
+        <!-- ******* Links JS ******* -->
+        <script>window.$ = window.jQuery = require('jquery')</script>
+        <script src="./controllers/autenticar.js"></script>
+
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="toolbar toolbar-header">
+
+            <h1 class="title">Header with actions</h1>
+
+            <div class="toolbar-actions fora">
+                <div class="areaUser">
+                    <div class="infoUser">
+                        <div class="teste">
+                            <button type="button"  id="btNav" class="btn-logout"  ><img class="btn-sair" src="./imagens/iconeRIO.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+       
+        <section id="side" class="navside hide">
+            <div>
+                <button type="button" id="fechar" class="btn-logout" ><img class="btn-sair" src="./imagens/close.png" alt=""></button>
+            </div>
+        </section>
+
+        <script>
+            $('#btNav').ready(function() {
+                $("#btNav").click(function () {
+                    $('#side').removeClass('hide');
+                    $('#side').addClass('show');
+                });
+            })
+            
+            $('#fechar').ready(function() {
+                $("#fechar").click(function () {
+                    $('#side').removeClass('show');
+                    $('#side').addClass('hide');
+                });
+            })             
+        </script>    
+    </body>
+</html>
+
